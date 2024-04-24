@@ -1,0 +1,112 @@
+.container {
+    max-width: 704px;
+    margin: 0 auto;
+    padding: 100px 0 0 0;
+}
+.select {
+    position: relative;
+    display: block;
+    max-width: 392px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+.select__head {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 14px 15px;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(66, 67, 72, 0.8);
+    cursor: pointer;
+}
+
+.select__head::after {
+    width: 10px;
+    height: 6px;
+    background: #FFF url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="100" width="100"%3E%3Cpath d="M97.625 25.3l-4.813-4.89c-1.668-1.606-3.616-2.41-5.84-2.41-2.27 0-4.194.804-5.777 2.41L50 52.087 18.806 20.412C17.223 18.805 15.298 18 13.03 18c-2.225 0-4.172.804-5.84 2.41l-4.75 4.89C.813 26.95 0 28.927 0 31.23c0 2.346.814 4.301 2.439 5.865l41.784 42.428C45.764 81.174 47.689 82 50 82c2.268 0 4.215-.826 5.84-2.476l41.784-42.428c1.584-1.608 2.376-3.563 2.376-5.865 0-2.26-.792-4.236-2.375-5.932z"/%3E%3C/svg%3E') no-repeat center / cover;
+    position: absolute;
+    right: 20px;
+    bottom: 50%;
+    transform: translateY(50%);
+    content: '';
+    display: block;
+    transition: .2s ease-in;
+}
+.select__list::-webkit-scrollbar {
+    width: 7px;
+    background-color: #F8F9FA;
+    padding: 5px;
+}
+
+.select__list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
+
+.select__head.open::after {
+    transform: translateY(50%) rotate(180deg);
+}
+
+.select__list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-top: 5px;
+    max-height: 205px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 100;
+    padding: 0;
+    font-size: 16px;
+    color: #424348;
+    overscroll-behavior: contain;
+}
+
+.select__list .select__item{
+    display: flex;
+    position: relative;
+    padding: 10px 15px;
+    cursor: pointer;
+    list-style-type: none;
+}
+.select__item2 {
+    display: flex;
+    position: relative;
+    padding: 10px 15px;
+    cursor: pointer;
+    list-style-type: none;
+}
+
+.select__list .select__item:hover {
+    background-color: rgba(224, 229, 231, 0.5);
+}
+
+.select__list .select__item2:hover {
+    background-color: rgba(224, 229, 231, 0.5);
+}
+
+.select__item_flag {
+    margin-right: 8px;
+}
+
+.content {
+    margin-top: 72px;
+}
+
+#text_head {
+    margin: 0;
+    padding: 0 0 16px 0;
+    font-size: 32px;
+    line-height: 40px;
+}
